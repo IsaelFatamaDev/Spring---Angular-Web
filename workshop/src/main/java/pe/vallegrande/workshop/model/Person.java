@@ -1,5 +1,6 @@
 package pe.vallegrande.workshop.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -26,6 +27,7 @@ public class Person {
     private String lastname;
 
     @Column(name = "birthday")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate birthday;
 
     @Column(name = "gender")

@@ -14,7 +14,7 @@ import java.util.List;
 public class PersonRest {
     private final PersonService personService;
 
-    @PostMapping
+    @PostMapping("/nuevo")
     public ResponseEntity<Person> addPerson(@RequestBody Person person) {
         return ResponseEntity.ok(personService.save(person));
     }
